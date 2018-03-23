@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-echo "SOMETHING HAPPENED"
-
 set -x
 echo "XXX install.sh"
 injected_dir=$1
