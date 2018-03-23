@@ -1,4 +1,4 @@
-embed-server --std-out=echo  --server-config=/standalone-openshift.xml
+embed-server --std-out=echo  --server-config=standalone-openshift.xml
 batch
 /subsystem=logging/logger=org.jboss.as.config:change-log-level(level=TRACE)
 run-batch
