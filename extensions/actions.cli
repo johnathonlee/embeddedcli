@@ -1,5 +1,5 @@
 embed-server --std-out=echo  --server-config=standalone-openshift.xml
 batch
-/subsystem=logging/logger=org.jboss.as.config:change-log-level(level=TRACE)
+/subsystem=datasources/data-source=testDS:add(jndi-name=java:jboss/datasources/testDS,enabled=true,use-java-context=true,connection-url="jdbc:h2:mem:accounts;INIT=RUNSCRIPT FROM '/opt/eap/extensions/customer-schema.sql'",driver-name=h2,user-name=sa,password=sa)
 run-batch
 quit
